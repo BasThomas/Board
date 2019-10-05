@@ -10,7 +10,10 @@ class BoardCollectionViewController: UICollectionViewController {
         // Register cell classes
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: ColumnCollectionViewCell.reuseIdentifier)
     }
-
+    @IBAction func addColumn(_ sender: Any) {
+        #warning("Implement Add Column")
+    }
+    
     /*
     // MARK: - Navigation
 

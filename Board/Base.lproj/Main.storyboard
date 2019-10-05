@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ha4-SV-cgf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NgG-3b-d17">
     <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Board Collection View Controller-->
+        <!--Board-->
         <scene sceneID="Mg9-oT-rOa">
             <objects>
                 <collectionViewController id="ha4-SV-cgf" customClass="BoardCollectionViewController" customModule="Board" customModuleProvider="target" sceneMemberID="viewController">
@@ -36,10 +36,38 @@
                             <outlet property="delegate" destination="ha4-SV-cgf" id="JzB-Tq-qeR"/>
                         </connections>
                     </collectionView>
+                    <navigationItem key="navigationItem" title="Board" id="q0B-S4-cAQ">
+                        <barButtonItem key="rightBarButtonItem" title="Add Column" largeContentSizeImage="plus" catalog="system" id="dRJ-rB-IgP">
+                            <connections>
+                                <action selector="addColumn:" destination="ha4-SV-cgf" id="Gf7-jg-H6O"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L57-ty-LaF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="144" y="-619"/>
+            <point key="canvasLocation" x="887.27678571428567" y="-620.28985507246387"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BW6-ES-G8c">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NgG-3b-d17" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="6EN-IL-lWw">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ha4-SV-cgf" kind="relationship" relationship="rootViewController" id="Lei-6L-sD0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Hw-Ay-JVj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="143.97321428571428" y="-620.28985507246387"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="plus" catalog="system" width="64" height="58"/>
+    </resources>
 </document>
