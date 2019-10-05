@@ -2,6 +2,8 @@ import UIKit
 
 class BoardCollectionViewController: UICollectionViewController {
 
+    var columns: [Column] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,12 +24,12 @@ class BoardCollectionViewController: UICollectionViewController {
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        0
+        columns.count
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        0
+        columns[section].cards.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

@@ -1,5 +1,5 @@
 import Foundation
 
-struct Card {
+struct Card: Hashable {
     let content: String
 }

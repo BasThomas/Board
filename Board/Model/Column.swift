@@ -1,5 +1,6 @@
 import Foundation
 
-struct Column {
+struct Column: Hashable {
     let title: String
+    let cards: [Card]
 }
