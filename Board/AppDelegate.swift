@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  Board
-//
-//  Created by Bas Thomas Broek on 23/09/2019.
-//  Copyright © 2019 Bas Thomas Broek. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
