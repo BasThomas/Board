@@ -11,24 +11,42 @@
         <scene sceneID="Mg9-oT-rOa">
             <objects>
                 <collectionViewController id="ha4-SV-cgf" customClass="BoardCollectionViewController" customModule="Board" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="aaY-it-trr">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" maximumZoomScale="4" dataMode="prototypes" prefetchingEnabled="NO" springLoaded="YES" id="aaY-it-trr">
                         <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eO0-cz-Ldd">
-                            <size key="itemSize" width="50" height="50"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Cvi-a5-ez3">
+                            <size key="itemSize" width="300" height="150"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="column" id="S9y-OR-Dsg" customClass="ColumnCollectionViewCell" customModule="Board" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="card" id="S9y-OR-Dsg" customClass="CardCollectionViewCell" customModule="Board" customModuleProvider="target">
+                                <rect key="frame" x="5" y="5" width="300" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="E3f-L3-iME">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gA2-pU-Yj5">
+                                            <rect key="frame" x="4" y="4" width="292" height="142"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="gA2-pU-Yj5" secondAttribute="bottom" constant="4" id="CZJ-IN-DhQ"/>
+                                        <constraint firstItem="gA2-pU-Yj5" firstAttribute="leading" secondItem="E3f-L3-iME" secondAttribute="leading" constant="4" id="IfE-YR-JGd"/>
+                                        <constraint firstAttribute="trailing" secondItem="gA2-pU-Yj5" secondAttribute="trailing" constant="4" id="OWe-QC-hMk"/>
+                                        <constraint firstItem="gA2-pU-Yj5" firstAttribute="top" secondItem="E3f-L3-iME" secondAttribute="top" constant="4" id="b0j-70-dPv"/>
+                                    </constraints>
                                 </collectionViewCellContentView>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="contentLabel" destination="gA2-pU-Yj5" id="T6f-AC-DrA"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -47,6 +65,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L57-ty-LaF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="887.27678571428567" y="-620.28985507246387"/>
+        </scene>
+        <!--Add Column Table View Controller-->
+        <scene sceneID="Anl-NW-SSA">
+            <objects>
+                <tableViewController storyboardIdentifier="addColumnTableViewController" id="Mwm-is-eUh" customClass="AddColumnTableViewController" customModule="Board" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="6SK-av-9zi">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Column Title" id="oq5-iF-bh6">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="iZ0-GD-PBo">
+                                        <rect key="frame" x="0.0" y="55.5" width="896" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iZ0-GD-PBo" id="obG-6f-gAi">
+                                            <rect key="frame" x="44" y="0.0" width="808" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="eg. Finished" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ncS-kz-zlt">
+                                                    <rect key="frame" x="4" y="4" width="800" height="36"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="ncS-kz-zlt" secondAttribute="trailing" constant="4" id="AA3-fa-8nC"/>
+                                                <constraint firstItem="ncS-kz-zlt" firstAttribute="top" secondItem="obG-6f-gAi" secondAttribute="top" constant="4" id="Ow8-Ep-qA0"/>
+                                                <constraint firstItem="ncS-kz-zlt" firstAttribute="leading" secondItem="obG-6f-gAi" secondAttribute="leading" constant="4" id="TlH-yN-EBU"/>
+                                                <constraint firstAttribute="bottom" secondItem="ncS-kz-zlt" secondAttribute="bottom" constant="4" id="vzY-Ib-eH9"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="Mwm-is-eUh" id="puB-x0-11v"/>
+                            <outlet property="delegate" destination="Mwm-is-eUh" id="xNo-wy-zBy"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iGW-2d-Ynw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="537" y="874"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BW6-ES-G8c">

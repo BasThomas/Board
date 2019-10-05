@@ -2,16 +2,20 @@ import UIKit
 
 class BoardCollectionViewController: UICollectionViewController {
 
-    var columns: [Column] = []
+    private let columnController = ColumnController()
+
+    var columns: [Column] = Board.example
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: ColumnCollectionViewCell.reuseIdentifier)
     }
-    @IBAction func addColumn(_ sender: Any) {
-        #warning("Implement Add Column")
+    
+    @IBAction func addColumn(_ sender: UIBarButtonItem) {
+        let addColumn = columnController.makeAddColumnTableViewController { column in
+
+        }
+
+        present(addColumn, animated: true)
     }
     
     /*
@@ -36,7 +40,8 @@ class BoardCollectionViewController: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ColumnCollectionViewCell.reuseIdentifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardCollectionViewCell.reuseIdentifier, for: indexPath) as! CardCollectionViewCell
+        cell.card = columns[indexPath.section].cards[indexPath.row]
     
         return cell
     }

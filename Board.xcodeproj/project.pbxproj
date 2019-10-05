@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		491931B4234895E0000D3C41 /* BoardCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491931B3234895E0000D3C41 /* BoardCollectionViewController.swift */; };
-		491931B6234896BC000D3C41 /* ColumnCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491931B5234896BC000D3C41 /* ColumnCollectionViewCell.swift */; };
 		491931B8234896D0000D3C41 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491931B7234896D0000D3C41 /* CardCollectionViewCell.swift */; };
 		491931BC23489893000D3C41 /* Column.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491931BB23489893000D3C41 /* Column.swift */; };
 		491931BE234898AF000D3C41 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491931BD234898AF000D3C41 /* Card.swift */; };
+		491931C123489F5B000D3C41 /* ColumnController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491931C023489F5B000D3C41 /* ColumnController.swift */; };
+		491931C32348A1A7000D3C41 /* AddColumnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491931C22348A1A7000D3C41 /* AddColumnViewController.swift */; };
+		491931C52348BC75000D3C41 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491931C42348BC75000D3C41 /* Board.swift */; };
 		5D1D456B2338A58B00F36E38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1D456A2338A58B00F36E38 /* AppDelegate.swift */; };
 		5D1D45702338A58B00F36E38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D1D456E2338A58B00F36E38 /* Main.storyboard */; };
 		5D1D45722338A58C00F36E38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D1D45712338A58C00F36E38 /* Assets.xcassets */; };
@@ -31,10 +33,12 @@
 
 /* Begin PBXFileReference section */
 		491931B3234895E0000D3C41 /* BoardCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCollectionViewController.swift; sourceTree = "<group>"; };
-		491931B5234896BC000D3C41 /* ColumnCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnCollectionViewCell.swift; sourceTree = "<group>"; };
 		491931B7234896D0000D3C41 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		491931BB23489893000D3C41 /* Column.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Column.swift; sourceTree = "<group>"; };
 		491931BD234898AF000D3C41 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		491931C023489F5B000D3C41 /* ColumnController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColumnController.swift; sourceTree = "<group>"; };
+		491931C22348A1A7000D3C41 /* AddColumnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddColumnViewController.swift; sourceTree = "<group>"; };
+		491931C42348BC75000D3C41 /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		5D1D45672338A58B00F36E38 /* Board.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Board.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D1D456A2338A58B00F36E38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D1D456F2338A58B00F36E38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -67,7 +71,6 @@
 		491931B923489879000D3C41 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				491931B5234896BC000D3C41 /* ColumnCollectionViewCell.swift */,
 				491931B7234896D0000D3C41 /* CardCollectionViewCell.swift */,
 			);
 			path = View;
@@ -78,8 +81,17 @@
 			children = (
 				491931BB23489893000D3C41 /* Column.swift */,
 				491931BD234898AF000D3C41 /* Card.swift */,
+				491931C42348BC75000D3C41 /* Board.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		491931BF23489F4B000D3C41 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				491931C023489F5B000D3C41 /* ColumnController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		5D1D455E2338A58B00F36E38 = {
@@ -105,6 +117,8 @@
 			children = (
 				5D1D456A2338A58B00F36E38 /* AppDelegate.swift */,
 				491931B3234895E0000D3C41 /* BoardCollectionViewController.swift */,
+				491931C22348A1A7000D3C41 /* AddColumnViewController.swift */,
+				491931BF23489F4B000D3C41 /* Controller */,
 				491931B923489879000D3C41 /* View */,
 				491931BA23489888000D3C41 /* Model */,
 				5D1D456E2338A58B00F36E38 /* Main.storyboard */,
@@ -226,11 +240,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				491931B8234896D0000D3C41 /* CardCollectionViewCell.swift in Sources */,
+				491931C123489F5B000D3C41 /* ColumnController.swift in Sources */,
 				491931BE234898AF000D3C41 /* Card.swift in Sources */,
 				491931BC23489893000D3C41 /* Column.swift in Sources */,
 				5D1D456B2338A58B00F36E38 /* AppDelegate.swift in Sources */,
 				491931B4234895E0000D3C41 /* BoardCollectionViewController.swift in Sources */,
-				491931B6234896BC000D3C41 /* ColumnCollectionViewCell.swift in Sources */,
+				491931C32348A1A7000D3C41 /* AddColumnViewController.swift in Sources */,
+				491931C52348BC75000D3C41 /* Board.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
