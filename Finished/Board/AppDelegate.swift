@@ -10,7 +10,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
+        let configurationName: String
+        if options.userActivities.first?.activityType == Card.userActivityType {
+            configurationName = "Card Configuration"
+        } else {
+            configurationName = "Default Configuration"
+        }
+        return UISceneConfiguration(name: configurationName, sessionRole: connectingSceneSession.role)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

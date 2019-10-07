@@ -36,6 +36,14 @@
 					<key>UISceneStoryboardFile</key>
 					<string>Main</string>
 				</dict>
+				<dict>
+					<key>UISceneConfigurationName</key>
+					<string>Card Configuration</string>
+					<key>UISceneDelegateClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).CardSceneDelegate</string>
+					<key>UISceneStoryboardFile</key>
+					<string>Card</string>
+				</dict>
 			</array>
 		</dict>
 	</dict>
@@ -59,6 +67,10 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>NSUserActivityTypes</key>
+	<array>
+		<string>nl.basbroek.card</string>
 	</array>
 </dict>
 </plist>
