@@ -18,6 +18,8 @@
 		5D1D45702338A58B00F36E38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D1D456E2338A58B00F36E38 /* Main.storyboard */; };
 		5D1D45722338A58C00F36E38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D1D45712338A58C00F36E38 /* Assets.xcassets */; };
 		5D1D45752338A58C00F36E38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D1D45732338A58C00F36E38 /* LaunchScreen.storyboard */; };
+		5D288BC7234B494300CD4558 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D288BC6234B494300CD4558 /* CardViewController.swift */; };
+		5D288BFB234B53DD00CD4558 /* Card.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D288BFA234B53DD00CD4558 /* Card.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		5D1D45712338A58C00F36E38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D1D45742338A58C00F36E38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D1D45762338A58C00F36E38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D288BC6234B494300CD4558 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		5D288BFA234B53DD00CD4558 /* Card.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Card.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,10 +99,12 @@
 				5D1D456A2338A58B00F36E38 /* AppDelegate.swift */,
 				491931B3234895E0000D3C41 /* BoardCollectionViewController.swift */,
 				491931C22348A1A7000D3C41 /* AddColumnViewController.swift */,
+				5D288BC6234B494300CD4558 /* CardViewController.swift */,
 				491931BF23489F4B000D3C41 /* Controller */,
 				491931B923489879000D3C41 /* View */,
 				491931BA23489888000D3C41 /* Model */,
 				5D1D456E2338A58B00F36E38 /* Main.storyboard */,
+				5D288BFA234B53DD00CD4558 /* Card.storyboard */,
 				5D1D45712338A58C00F36E38 /* Assets.xcassets */,
 				5D1D45732338A58C00F36E38 /* LaunchScreen.storyboard */,
 				5D1D45762338A58C00F36E38 /* Info.plist */,
@@ -164,6 +170,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D288BFB234B53DD00CD4558 /* Card.storyboard in Resources */,
 				5D1D45752338A58C00F36E38 /* LaunchScreen.storyboard in Resources */,
 				5D1D45722338A58C00F36E38 /* Assets.xcassets in Resources */,
 				5D1D45702338A58B00F36E38 /* Main.storyboard in Resources */,
@@ -182,6 +189,7 @@
 				491931BE234898AF000D3C41 /* Card.swift in Sources */,
 				491931BC23489893000D3C41 /* Column.swift in Sources */,
 				5D1D456B2338A58B00F36E38 /* AppDelegate.swift in Sources */,
+				5D288BC7234B494300CD4558 /* CardViewController.swift in Sources */,
 				491931B4234895E0000D3C41 /* BoardCollectionViewController.swift in Sources */,
 				491931C32348A1A7000D3C41 /* AddColumnViewController.swift in Sources */,
 				491931C52348BC75000D3C41 /* Board.swift in Sources */,

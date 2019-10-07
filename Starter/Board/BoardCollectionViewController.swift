@@ -11,24 +11,13 @@ class BoardCollectionViewController: UICollectionViewController {
     }
     
     @IBAction func addColumn(_ sender: UIBarButtonItem) {
-        let addColumn = columnController.makeAddColumnTableViewController { column in
-
+        let addColumn = columnController.makeAddColumnTableViewController { [weak self] column in
+            self?.columns.append(column)
+            self?.collectionView.reloadData()
         }
 
         present(addColumn, animated: true)
     }
-    
-    /*
-     // MARK: - Navigation
-
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using [segue destinationViewController].
-     // Pass the selected object to the new view controller.
-     }
-     */
-
-    // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         columns.count

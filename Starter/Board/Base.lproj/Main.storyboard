@@ -43,7 +43,7 @@
                                         <constraint firstItem="gA2-pU-Yj5" firstAttribute="top" secondItem="E3f-L3-iME" secondAttribute="top" constant="4" id="b0j-70-dPv"/>
                                     </constraints>
                                 </collectionViewCellContentView>
-                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="contentLabel" destination="gA2-pU-Yj5" id="T6f-AC-DrA"/>
                                 </connections>
@@ -100,12 +100,41 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="Cards" footerTitle="Separate cards by comma" id="8zH-pv-65v">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="WZo-YS-qbk">
+                                        <rect key="frame" x="0.0" y="162.5" width="896" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WZo-YS-qbk" id="mX7-uV-ubO">
+                                            <rect key="frame" x="44" y="0.0" width="808" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="eg. Dishes, Cooking, Cleaning" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JZ0-MD-OMK">
+                                                    <rect key="frame" x="4" y="4" width="800" height="36"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="JZ0-MD-OMK" secondAttribute="bottom" constant="4" id="BXR-Mf-qvh"/>
+                                                <constraint firstAttribute="trailing" secondItem="JZ0-MD-OMK" secondAttribute="trailing" constant="4" id="DsK-8B-5GO"/>
+                                                <constraint firstItem="JZ0-MD-OMK" firstAttribute="leading" secondItem="mX7-uV-ubO" secondAttribute="leading" constant="4" id="P2B-Ov-N12"/>
+                                                <constraint firstItem="JZ0-MD-OMK" firstAttribute="top" secondItem="mX7-uV-ubO" secondAttribute="top" constant="4" id="uSa-2H-brz"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="Mwm-is-eUh" id="puB-x0-11v"/>
                             <outlet property="delegate" destination="Mwm-is-eUh" id="xNo-wy-zBy"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="cardsTextField" destination="JZ0-MD-OMK" id="fmd-ny-71s"/>
+                        <outlet property="columnTextField" destination="ncS-kz-zlt" id="mlg-w4-Ncv"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iGW-2d-Ynw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
