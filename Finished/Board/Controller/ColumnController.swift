@@ -22,13 +22,9 @@ class ColumnController {
         controller.navigationItem.rightBarButtonItem = .init(
             title: "Add Column",
             style: .done,
-            target: self,
-            action: #selector(add)
+            target: controller,
+            action: #selector(AddColumnTableViewController.add)
         )
         return navigationController
-    }
-
-    @objc private func add() {
-        
     }
 }

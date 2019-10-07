@@ -12,8 +12,9 @@ class BoardCollectionViewController: UICollectionViewController {
     }
     
     @IBAction func addColumn(_ sender: UIBarButtonItem) {
-        let addColumn = columnController.makeAddColumnTableViewController { column in
-
+        let addColumn = columnController.makeAddColumnTableViewController { [weak self] column in
+            self?.columns.append(column)
+            self?.collectionView.reloadData()
         }
 
         present(addColumn, animated: true)
