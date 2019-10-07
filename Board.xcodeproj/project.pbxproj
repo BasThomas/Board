@@ -18,18 +18,7 @@
 		5D1D45702338A58B00F36E38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D1D456E2338A58B00F36E38 /* Main.storyboard */; };
 		5D1D45722338A58C00F36E38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D1D45712338A58C00F36E38 /* Assets.xcassets */; };
 		5D1D45752338A58C00F36E38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D1D45732338A58C00F36E38 /* LaunchScreen.storyboard */; };
-		5D1D45802338A58C00F36E38 /* BoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D1D457F2338A58C00F36E38 /* BoardTests.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		5D1D457C2338A58C00F36E38 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5D1D455F2338A58B00F36E38 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5D1D45662338A58B00F36E38;
-			remoteInfo = Board;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		491931B3234895E0000D3C41 /* BoardCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCollectionViewController.swift; sourceTree = "<group>"; };
@@ -45,20 +34,10 @@
 		5D1D45712338A58C00F36E38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D1D45742338A58C00F36E38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D1D45762338A58C00F36E38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5D1D457B2338A58C00F36E38 /* BoardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5D1D457F2338A58C00F36E38 /* BoardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardTests.swift; sourceTree = "<group>"; };
-		5D1D45812338A58C00F36E38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		5D1D45642338A58B00F36E38 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5D1D45782338A58C00F36E38 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -98,7 +77,6 @@
 			isa = PBXGroup;
 			children = (
 				5D1D45692338A58B00F36E38 /* Board */,
-				5D1D457E2338A58C00F36E38 /* BoardTests */,
 				5D1D45682338A58B00F36E38 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -107,7 +85,6 @@
 			isa = PBXGroup;
 			children = (
 				5D1D45672338A58B00F36E38 /* Board.app */,
-				5D1D457B2338A58C00F36E38 /* BoardTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,15 +104,6 @@
 				5D1D45762338A58C00F36E38 /* Info.plist */,
 			);
 			path = Board;
-			sourceTree = "<group>";
-		};
-		5D1D457E2338A58C00F36E38 /* BoardTests */ = {
-			isa = PBXGroup;
-			children = (
-				5D1D457F2338A58C00F36E38 /* BoardTests.swift */,
-				5D1D45812338A58C00F36E38 /* Info.plist */,
-			);
-			path = BoardTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,24 +126,6 @@
 			productReference = 5D1D45672338A58B00F36E38 /* Board.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5D1D457A2338A58C00F36E38 /* BoardTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5D1D45872338A58C00F36E38 /* Build configuration list for PBXNativeTarget "BoardTests" */;
-			buildPhases = (
-				5D1D45772338A58C00F36E38 /* Sources */,
-				5D1D45782338A58C00F36E38 /* Frameworks */,
-				5D1D45792338A58C00F36E38 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5D1D457D2338A58C00F36E38 /* PBXTargetDependency */,
-			);
-			name = BoardTests;
-			productName = BoardTests;
-			productReference = 5D1D457B2338A58C00F36E38 /* BoardTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -188,10 +138,6 @@
 				TargetAttributes = {
 					5D1D45662338A58B00F36E38 = {
 						CreatedOnToolsVersion = 10.3;
-					};
-					5D1D457A2338A58C00F36E38 = {
-						CreatedOnToolsVersion = 10.3;
-						TestTargetID = 5D1D45662338A58B00F36E38;
 					};
 				};
 			};
@@ -209,7 +155,6 @@
 			projectRoot = "";
 			targets = (
 				5D1D45662338A58B00F36E38 /* Board */,
-				5D1D457A2338A58C00F36E38 /* BoardTests */,
 			);
 		};
 /* End PBXProject section */
@@ -222,13 +167,6 @@
 				5D1D45752338A58C00F36E38 /* LaunchScreen.storyboard in Resources */,
 				5D1D45722338A58C00F36E38 /* Assets.xcassets in Resources */,
 				5D1D45702338A58B00F36E38 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5D1D45792338A58C00F36E38 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,23 +188,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5D1D45772338A58C00F36E38 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5D1D45802338A58C00F36E38 /* BoardTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		5D1D457D2338A58C00F36E38 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5D1D45662338A58B00F36E38 /* Board */;
-			targetProxy = 5D1D457C2338A58C00F36E38 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5D1D456E2338A58B00F36E38 /* Main.storyboard */ = {
@@ -438,46 +360,6 @@
 			};
 			name = Release;
 		};
-		5D1D45882338A58C00F36E38 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = BoardTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = nl.basbroek.BoardTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Board.app/Board";
-			};
-			name = Debug;
-		};
-		5D1D45892338A58C00F36E38 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = BoardTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = nl.basbroek.BoardTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Board.app/Board";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -495,15 +377,6 @@
 			buildConfigurations = (
 				5D1D45852338A58C00F36E38 /* Debug */,
 				5D1D45862338A58C00F36E38 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5D1D45872338A58C00F36E38 /* Build configuration list for PBXNativeTarget "BoardTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5D1D45882338A58C00F36E38 /* Debug */,
-				5D1D45892338A58C00F36E38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
