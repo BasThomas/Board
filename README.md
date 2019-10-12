@@ -19,6 +19,8 @@ and go from there!
 
 ## Adding support for multiple windows
 
+### `SceneDelegate`
+
 We'll need to tell our application that we want to support multiple windows.
 To do so, go to the `Info.plist` and add the required configuration.
 
@@ -84,6 +86,8 @@ Add the following within the `UIWindowSceneSessionRoleApplication` array:
 </dict>
 ```
 </details>
+
+### `NSUserActivity`
 
 Great! Now, we'll use [`NSUserActivity`](https://developer.apple.com/documentation/foundation/nsuseractivity)
 to be able to create our newly created configuration.
@@ -160,6 +164,8 @@ make one more edit to the `Info.plist`.
 ```
 </details>
 
+### Drag and Drop
+
 Almost there, almost there. We'll add [drag and drop](https://developer.apple.com/ios/drag-and-drop/)
 support, which works very nicely with the configurations we created, allowing
 for an intuitive way to create the new session.
@@ -190,6 +196,8 @@ extension BoardCollectionViewController: UICollectionViewDragDelegate {
 ```
 </details>
 
+### `AppDelegate`
+
 And for the grand finale, we'll make sure our application handles which
 configuration to connect to, and when.
 
@@ -212,6 +220,8 @@ func application(_ application: UIApplication, configurationForConnecting connec
 
 Build and run. You can now drag a card and drop it at the screen edge to create
 a new scene. 🎉
+
+### Scene Destruction
 
 One more thing... the new scene has a close button, but it doesn't do anything.
 Let's hook that up.
